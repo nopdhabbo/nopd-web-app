@@ -20,6 +20,7 @@ export default function Home() {
             />
           </div>
 
+          {/* NOPD Content */}
           <div className="flex flex-col z-10 justify-center">
             <h1 className="text-2xl text-yellow-700 uppercase font-extrabold">
               nopd
