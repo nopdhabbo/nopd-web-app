@@ -34,7 +34,9 @@ export default function RootLayout({
       </Head>
       <body className={poppins.className}>
         <Header />
-        {children}
+        <main className="main-section">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

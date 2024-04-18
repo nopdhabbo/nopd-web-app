@@ -1,8 +1,8 @@
 const footerMenu = {
   menuItems: [
     { name: 'home', value: '/' },
-    { name: 'aboutus', value: '/aboutus' },
-    { name: 'contactus', value: '/contactus' },
+    { name: 'about us', value: '/aboutus' },
+    { name: 'contact us', value: '/contactus' },
     { name: 'FAQ', value: '/faq' }
   ],
   socialMenuItems: [
