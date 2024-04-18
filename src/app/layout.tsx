@@ -1,11 +1,21 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google"; // Import Poppins from next/font/google
+
 import "./globals.css";
 
 import Head from "next/head"; // Import Head component from next/head
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"]
+});
 
+// Components 
+
+import Header from '@/components/Layout/Header'
+import Footer from '@/components/Layout/Footer'
+
+// MetaData
 export const metadata: Metadata = {
   title: "NOPD - New Orlean's Police Department",
   description:
@@ -22,7 +32,11 @@ export default function RootLayout({
       <Head>
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
-      <body className={inter.className}>{children}</body>
+      <body className={poppins.className}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

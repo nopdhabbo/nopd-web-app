@@ -1,0 +1,106 @@
+/* Navigation Container */
+.navigationContainer {
+  width: 100%;
+  height: 5rem;
+
+  background-color: var(--blue-800);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+/* Navigation Wrapper */
+.navigationWrapper {
+  height: 100%;
+  width: 73.75rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navigation Logo & Navigation Menu */
+.navigationLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+/* NavigationLogo */
+.navigationLogo img {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* NavigationLogo */
+.navigationLogo h1 {
+  font-size: 2rem;
+  color: var(--color-1);
+  font-weight: 800;
+}
+
+/* Navigation Menu */
+
+/* navigationMenuText */
+.navigationMenu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navigationMenuText {
+  font-size: 1.125;
+  text-transform: capitalize;
+  color: var(--blue-300);
+  transition: all ease-in-out 0.1s;
+}
+
+/* navigationMenuText:hover */
+.navigationMenuText:hover {
+  font-weight: 700;
+  color: var(--gray-100);
+  cursor: pointer;
+}
+
+/* navigationButtons */
+.navigationButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigationMenuTextSecurity {
+  font-weight: 700;
+  color: var(--gray-100);
+  transition: all ease-in-out 0.2s;
+}
+.navigationMenuTextSecurity:hover {
+  color: var(--color-1);
+  cursor: pointer;
+}
+
+.loginButton {
+  border-radius: 0.2rem;
+  height: 2.1rem;
+  width: 6rem;
+  background-color: var(--gray-100);
+  color: var(--blue-800);
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all ease-in-out 0.2s;
+}
+
+.loginButton:hover {
+  background-color: var(--blue-900);
+  background-color: var(--color-1);
+  color: var(--gray-100);
+  color: var(--blue-900);
+
+  box-shadow: var(--box-shadow-1);
+}
