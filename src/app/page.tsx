@@ -1,7 +1,44 @@
+'use client'
+import React, { useState } from 'react';
+
 import style from './home.module.css';
+
+import Link from 'next/link';
+import Image from 'next/image';
+
+// import data
+import hereSectionData from '@/data/app/home/heroSection'
+import secondSectionData from '@/data/app/home/secondSection';
+import thirdSectionData from '@/data/app/home/thirdSection';
+import fourSectionData from '@/data/app/home/fourSection';
+import fiveSectionData from '@/data/app/home/fiveSection';
+import sixSectionData from '@/data/app/home/sixSection';
+
+// import image
+import fiveSectionImage from '@/../public/assets/nopd/app/home/art_friendstream1.png'
+import MinusIcon from '@/../public/assets/nopd/app/home/minusIcon.svg'
+import PlusIcon from '@/../public/assets/nopd/app/home/plusIcon.svg'
+
+// components
 
 
 export default function Home() {
+
+
+  const [hoveredImages, setHoveredImages] = useState(Array(10).fill(false)); // Assuming you have 10 images
+
+  const handleMouseEnter = (index: number) => {
+    const updatedHoveredImages = [...hoveredImages];
+    updatedHoveredImages[index] = true;
+    setHoveredImages(updatedHoveredImages);
+  };
+
+  const handleMouseLeave = (index: number) => {
+    const updatedHoveredImages = [...hoveredImages];
+    updatedHoveredImages[index] = false;
+    setHoveredImages(updatedHoveredImages);
+  };
+
   return (
     <>
       <div className={style.backgroundRectangle}>
@@ -11,42 +48,146 @@ export default function Home() {
         <div className={style.rectangleFive}></div>
         <div className={style.rectangleFour}></div>
         <div className={style.rectangleSix}></div>
-        <div className={style.rectangleSeven}></div>
-        <div className={style.rectangleEight}></div>
-        <div className={style.rectangleNine}></div>
-        <div className={style.rectangleTen}></div>
+
       </div>
       <main className={style.homeMain}>
-        <section className={style.heroSection}>
-          <div className={style.heroSectionLeft}>
-            {/* Hero Section Heading Container */}
-            <div className={style.heroSectionHeadingContainer}>
-              <h1>Welcome to New Orlean’s City Police Department. </h1>
-              <p>Experience nostalgia with NOPD - the top Police Roleplay game on Habbo since 2007. Dive into the action and relive the golden days!</p>
-              <button>
-                <span>
-                  join now
-                </span>
-              </button>
-              <div className={style.heroSectionSocialMedia}>
+        <section>
+          <div>
+            <div className={style.heroSectionLeft}>
+              {/* Hero Section Heading Container */}
+              <div className={style.heroSectionHeadingContainer}>
+                <h1>Welcome to New Orlean’s City Police Department. </h1>
+                <p>Experience nostalgia with NOPD - the top Police Roleplay game on Habbo since 2007. Dive into the action and relive the golden days!</p>
+                <button>
+                  <span>
+                    join now
+                  </span>
+                </button>
+                <div className={style.heroSectionSocialMedia}>
+                  {/* Map over social media data and render each platform */}
+                  {hereSectionData.socialMedia.map((item, index) => (
+                    <Link key={index} href={item.link} target="_blank" rel="noopener noreferrer">
+                      <Image src={item.imgSrc} alt={item.alt} width={40} height={40} />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
 
+            {/* Hero Section Right */}
+            <div className={style.heroSectionRight}></div>
+          </div>
+        </section>
+
+        {/* Second Section */}
+        <section >
+          <div >
+            {Object.keys(secondSectionData).map((key) => (
+              <div className={style.cardContainer} key={key}>
+                <Image src={secondSectionData[key as keyof typeof secondSectionData].imgSrc} alt={secondSectionData[key as keyof typeof secondSectionData].title} width={160} height={160} />
+                <h2>{secondSectionData[key as keyof typeof secondSectionData].title}</h2>
+                <p>{secondSectionData[key as keyof typeof secondSectionData].description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Third Section */}
+        <section className={style.thirdSection}>
+          <div>
+            <div className={style.thirdSectionContainer}>
+              <div className={style.thirdSectionLeft}>
+                {/* <WorldClock /> */}
+              </div>
+              <div className={style.thirdSectionRight}>
+                <h2>{thirdSectionData.title}</h2>
+                <p>{thirdSectionData.description}</p>
               </div>
             </div>
           </div>
+        </section>
 
-          <div className={style.heroSectionRight}>
+        {/* Section Four */}
+        <section className={style.fourSection} >
+          <div>
+            <div>
+              <h1>our foundation team</h1>
+            </div>
 
+            {/* four Section Data */}
+            <div className={style.foundationTeam}>
+              {fourSectionData.map((item, index) => (
+                <div
+                  key={index}
+                  className={style.foundationTeamContainer}
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={() => handleMouseLeave(index)}
+                >
+                  <Image
+                    src={
+                      hoveredImages[index]
+                        ? `https://www.habbo.com/habbo-imaging/avatarimage?user=${item.habboUserName}&direction=3&head_direction=3&action=wav&gesture=nrm&size=m`
+                        : `https://www.habbo.com/habbo-imaging/avatarimage?user=${item.habboUserName}&direction=3&head_direction=3&action=&gesture=nrm&size=m`
+                    }
+                    alt="habbo avatar"
+                    width={130}
+                    height={280}
+                  />
+                  <div>
+                    <h1>{item.habboUserName}</h1>
+                    <h2>{item.position}</h2>
+                  </div>
+                </div>
+              ))}
+
+            </div>
           </div>
         </section>
-        <section>section 2</section>
-        <section>section 3</section>
-        <section>section 4</section>
-        <section>section 5</section>
-        <section>section 6</section>
-        <section>section 7</section>
 
+        {/* Section Five */}
+        <section>
+          <div>
+            <div>
+              <Image src={fiveSectionImage} alt="art friendstream" width={300} height={200} />
+            </div>
+            <div className={style.fiveSectionHeadingContainer}>
+              <h1>{fiveSectionData.title}</h1>
+              <p>{fiveSectionData.description}</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Section Six */}
+        <section>
+          <div className={style.sixSectionContainer}>
+            <div>
+              <h1>Frequently Ask Questions</h1>
+            </div>
+            <div className={style.sixSectionCardsCoontainer}>
+
+              {sixSectionData.faq.map((item, index) => (
+                <div key={index} className={style.sixSectionCardContainer}>
+                  <div className={style.sixSectionCollapseIcon}>
+                    <Image src={MinusIcon} alt="collapse" width={20} height={20} />
+                  </div>
+                  <div className={style.sixSectionCardContent}>
+                    <h1>{item.question}</h1>
+                    <p>{item.response}</p>
+                  </div>
+                </div>
+              ))}
+
+            </div>
+          </div>
+        </section>
+
+        {/* Section Seven */}
+        <section>
+          <div>
+            {/* sevenSection */}
+          </div>
+        </section>
       </main>
-
     </>
   );
 }
