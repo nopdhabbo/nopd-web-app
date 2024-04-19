@@ -20,10 +20,10 @@ import MinusIcon from '@/../public/assets/nopd/app/home/minusIcon.svg'
 import PlusIcon from '@/../public/assets/nopd/app/home/plusIcon.svg'
 
 // components
-
+import Main from '@/components/common/Main'
+import Section from '@/components/common/Section'
 
 export default function Home() {
-
 
   const [hoveredImages, setHoveredImages] = useState(Array(10).fill(false)); // Assuming you have 10 images
 
@@ -50,115 +50,103 @@ export default function Home() {
         <div className={style.rectangleSix}></div>
 
       </div>
-      <main className={style.homeMain}>
-        <section>
-          <div>
-            <div className={style.heroSectionLeft}>
-              {/* Hero Section Heading Container */}
-              <div className={style.heroSectionHeadingContainer}>
-                <h1>Welcome to New Orlean’s City Police Department. </h1>
-                <p>Experience nostalgia with NOPD - the top Police Roleplay game on Habbo since 2007. Dive into the action and relive the golden days!</p>
-                <button>
-                  <span>
-                    join now
-                  </span>
-                </button>
-                <div className={style.heroSectionSocialMedia}>
-                  {/* Map over social media data and render each platform */}
-                  {hereSectionData.socialMedia.map((item, index) => (
-                    <Link key={index} href={item.link} target="_blank" rel="noopener noreferrer">
-                      <Image src={item.imgSrc} alt={item.alt} width={40} height={40} />
-                    </Link>
-                  ))}
-                </div>
+      <Main >
+        <Section>
+          <div className={style.heroSectionLeft}>
+            {/* Hero Section Heading Container */}
+            <div className={style.heroSectionHeadingContainer}>
+              <h1>Welcome to New Orlean’s City Police Department. </h1>
+              <p>Experience nostalgia with NOPD - the top Police Roleplay game on Habbo since 2007. Dive into the action and relive the golden days!</p>
+              <button>
+                <span>
+                  join now
+                </span>
+              </button>
+              <div className={style.heroSectionSocialMedia}>
+                {/* Map over social media data and render each platform */}
+                {hereSectionData.socialMedia.map((item, index) => (
+                  <Link key={index} href={item.link} target="_blank" rel="noopener noreferrer">
+                    <Image src={item.imgSrc} alt={item.alt} width={40} height={40} />
+                  </Link>
+                ))}
               </div>
             </div>
-
-            {/* Hero Section Right */}
-            <div className={style.heroSectionRight}></div>
           </div>
-        </section>
+          {/* Hero Section Right */}
+          <div className={style.heroSectionRight}></div>
+        </Section>
 
         {/* Second Section */}
-        <section >
-          <div >
-            {Object.keys(secondSectionData).map((key) => (
-              <div className={style.cardContainer} key={key}>
-                <Image src={secondSectionData[key as keyof typeof secondSectionData].imgSrc} alt={secondSectionData[key as keyof typeof secondSectionData].title} width={160} height={160} />
-                <h2>{secondSectionData[key as keyof typeof secondSectionData].title}</h2>
-                <p>{secondSectionData[key as keyof typeof secondSectionData].description}</p>
+        <Section >
+          {Object.keys(secondSectionData).map((key) => (
+            <div className={style.cardContainer} key={key}>
+              <Image src={secondSectionData[key as keyof typeof secondSectionData].imgSrc} alt={secondSectionData[key as keyof typeof secondSectionData].title} width={160} height={160} />
+              <h2>{secondSectionData[key as keyof typeof secondSectionData].title}</h2>
+              <p>{secondSectionData[key as keyof typeof secondSectionData].description}</p>
+            </div>
+          ))}
+        </Section>
+
+        {/* Third Section */}
+        <Section className={style.thirdSection}>
+          <div className={style.thirdSectionContainer}>
+            <div className={style.thirdSectionLeft}>
+              {/* <WorldClock /> */}
+            </div>
+            <div className={style.thirdSectionRight}>
+              <h2>{thirdSectionData.title}</h2>
+              <p>{thirdSectionData.description}</p>
+            </div>
+          </div>
+        </Section>
+
+        {/* Section Four */}
+        <Section className={style.fourSection} >
+          <div>
+            <h1>our foundation team</h1>
+          </div>
+
+          {/* four Section Data */}
+          <div className={style.foundationTeam}>
+            {fourSectionData.map((item, index) => (
+              <div
+                key={index}
+                className={style.foundationTeamContainer}
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={() => handleMouseLeave(index)}
+              >
+                <Image
+                  src={
+                    hoveredImages[index]
+                      ? `https://www.habbo.com/habbo-imaging/avatarimage?user=${item.habboUserName}&direction=3&head_direction=3&action=wav&gesture=nrm&size=m`
+                      : `https://www.habbo.com/habbo-imaging/avatarimage?user=${item.habboUserName}&direction=3&head_direction=3&action=&gesture=nrm&size=m`
+                  }
+                  alt="habbo avatar"
+                  width={130}
+                  height={280}
+                />
+                <div>
+                  <h1>{item.habboUserName}</h1>
+                  <h2>{item.position}</h2>
+                </div>
               </div>
             ))}
           </div>
-        </section>
-
-        {/* Third Section */}
-        <section className={style.thirdSection}>
-          <div>
-            <div className={style.thirdSectionContainer}>
-              <div className={style.thirdSectionLeft}>
-                {/* <WorldClock /> */}
-              </div>
-              <div className={style.thirdSectionRight}>
-                <h2>{thirdSectionData.title}</h2>
-                <p>{thirdSectionData.description}</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section Four */}
-        <section className={style.fourSection} >
-          <div>
-            <div>
-              <h1>our foundation team</h1>
-            </div>
-
-            {/* four Section Data */}
-            <div className={style.foundationTeam}>
-              {fourSectionData.map((item, index) => (
-                <div
-                  key={index}
-                  className={style.foundationTeamContainer}
-                  onMouseEnter={() => handleMouseEnter(index)}
-                  onMouseLeave={() => handleMouseLeave(index)}
-                >
-                  <Image
-                    src={
-                      hoveredImages[index]
-                        ? `https://www.habbo.com/habbo-imaging/avatarimage?user=${item.habboUserName}&direction=3&head_direction=3&action=wav&gesture=nrm&size=m`
-                        : `https://www.habbo.com/habbo-imaging/avatarimage?user=${item.habboUserName}&direction=3&head_direction=3&action=&gesture=nrm&size=m`
-                    }
-                    alt="habbo avatar"
-                    width={130}
-                    height={280}
-                  />
-                  <div>
-                    <h1>{item.habboUserName}</h1>
-                    <h2>{item.position}</h2>
-                  </div>
-                </div>
-              ))}
-
-            </div>
-          </div>
-        </section>
+        </Section>
 
         {/* Section Five */}
-        <section>
+        <Section>
           <div>
-            <div>
-              <Image src={fiveSectionImage} alt="art friendstream" width={300} height={200} />
-            </div>
-            <div className={style.fiveSectionHeadingContainer}>
-              <h1>{fiveSectionData.title}</h1>
-              <p>{fiveSectionData.description}</p>
-            </div>
+            <Image src={fiveSectionImage} alt="art friendstream" width={300} height={200} />
           </div>
-        </section>
+          <div className={style.fiveSectionHeadingContainer}>
+            <h1>{fiveSectionData.title}</h1>
+            <p>{fiveSectionData.description}</p>
+          </div>
+        </Section>
 
         {/* Section Six */}
-        <section>
+        <Section>
           <div className={style.sixSectionContainer}>
             <div>
               <h1>Frequently Ask Questions</h1>
@@ -179,15 +167,15 @@ export default function Home() {
 
             </div>
           </div>
-        </section>
+        </Section>
 
         {/* Section Seven */}
-        <section>
+        <Section>
           <div>
             {/* sevenSection */}
           </div>
-        </section>
-      </main>
+        </Section>
+      </Main>
     </>
   );
 }
