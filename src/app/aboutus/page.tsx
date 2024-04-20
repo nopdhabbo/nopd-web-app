@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 
 // style sheet
-import style from './aboutus.module.css'
+import style from './style.module.css'
 
 // data
 import firstSectionData from '@/data/app/aboutus/firstSection'

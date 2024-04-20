@@ -372,3 +372,21 @@
   background-position: left;
   background-repeat: no-repeat;
 }
+
+/* Loading Page */
+
+.Loading {
+  width: 100%;
+  height: 100%;
+  background: var(--blue-300);
+  z-index: 200;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
