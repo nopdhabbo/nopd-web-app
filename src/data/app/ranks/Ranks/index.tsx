@@ -2,7 +2,7 @@ const index = [
   {
     "badgeName": "NOPD ID",
     "badgeImage": "https://www.habbo.com/habbo-imaging/badge/b07014s02114s36014s44114t500142c02ee2063c7c6fa7ef59a511e53c5d6.gif",
-    "duration": "20-40 minutes",
+    "duration": "20 minutes",
     "ranks": [
       "RECRUIT",
       "OFFICER I",
@@ -19,7 +19,7 @@ const index = [
   {
     "badgeName": "Advanced Officers",
     "badgeImage": "https://www.habbo.com/habbo-imaging/badge/b08014s02171s36114s43114s38014aa3bb68aae09850b9ce40f2a757447a0.gif",
-    "duration": "30-60 minutes",
+    "duration": "30 minutes",
     "ranks": [
       "CONSTABLE",
       "ASSISTANT CHIEF CONSTABLE",
@@ -73,7 +73,7 @@ const index = [
   {
     "badgeName": "Law Division",
     "badgeImage": "https://www.habbo.com/habbo-imaging/badge/b06134s02215s44114s38114s1221747e3e9a0e7b205b42ffd5be35dfecfa4.gif",
-    "duration": "1 hour - 2 hours",
+    "duration": "1 hour",
     "ranks": [
       "LAWYER",
       "LAWYER II",
@@ -93,7 +93,7 @@ const index = [
   {
     "badgeName": "SWAT Team Division",
     "badgeImage": "https://www.habbo.com/habbo-imaging/badge/b06014s02134s12117s43014t27014907d5f12fe764408c3d6b8be4e3eabaf.gif",
-    "duration": "1 hour - 2 hours",
+    "duration": "1 hour",
     "ranks": [
       "SWAT AGENT",
       "SWAT AGENT II",
@@ -110,7 +110,7 @@ const index = [
   {
     "badgeName": "Operation Unit",
     "badgeImage": "https://www.habbo.com/habbo-imaging/badge/b08134s02224s12117s44114s38174d78ac027d525d1a3c6e1c50f4a43b485.gif",
-    "duration": "1 hour - 2 hours",
+    "duration": "1 hour",
     "ranks": [
       "FIELD OPERATIVE",
       "FIELD OPERATIVE II",
@@ -128,7 +128,7 @@ const index = [
   {
     "badgeName": "Trial High Management",
     "badgeImage": "https://www.habbo.com/habbo-imaging/badge/b06134s02234s12237s44154s380141ce4ecd96964f7714cebd7e4ced878dd.gif",
-    "duration": "1 hour - 2 hours",
+    "duration": "1 hour",
     "ranks": [
       "JNR.CHIEF CURATOR",
       "JNR.CHIEF CURATOR II",
@@ -143,7 +143,7 @@ const index = [
   {
     "badgeName": "High Management",
     "badgeImage": "https://www.habbo.com/habbo-imaging/badge/b08134s02140s12117s44154s38014745ec89704a1f9e053307ed8c66e97e8.gif",
-    "duration": "1 hour - 2 hours",
+    "duration": "2 hours",
     "ranks": [
       "SNR.HQ MANAGER",
       "OVERSEER",
@@ -267,7 +267,7 @@ const index = [
   {
     "badgeName": "Presidential Badge",
     "badgeImage": "https://www.habbo.com/habbo-imaging/badge/b06054s02025s11117s43114s3811411740167b145d45fb1a99545d818c5e0.gif",
-    "duration": "24-48 hours",
+    "duration": "48 hours",
     "ranks": [
       "ASST. VICE PRESIDENT",
       "VICE PRESIDENT",
@@ -277,7 +277,7 @@ const index = [
   {
     "badgeName": "International Affairs",
     "badgeImage": "https://www.habbo.com/habbo-imaging/badge/b10134s02175s43243s44034s38244a0f63a7e6d9f1ea2a3a59be8385480ad.gif",
-    "duration": "48-72 hours",
+    "duration": "48",
     "ranks": [
       "O.P.R (OFFICER OF PROFESSIONAL RESPONSIBILITY)",
       "C.O.A.C (CHIEF OF ALCOHOL CONTROL)",
@@ -305,7 +305,7 @@ const index = [
   {
     "badgeName": "Government",
     "badgeImage": "https://www.habbo.com/habbo-imaging/badge/b10134s02135s44014s12017s38014f78b54e8eb94d7497c9843b3f5a00fff.gif",
-    "duration": "48-72 hours",
+    "duration": "72 hours",
     "ranks": [
       "COMMITTEE SECRETARY",
       "COMMITTEE MEMBER",
@@ -323,7 +323,7 @@ const index = [
   {
     "badgeName": "Elite Board",
     "badgeImage": "https://www.habbo.com/habbo-imaging/badge/b02134s02175s44113s12177s3801441a80618e68bcc2de6126fefe3ae036c.gif",
-    "duration": "48-72 hours",
+    "duration": "72 hours",
     "ranks": [
       "ELITE BOARD MEMBER",
       "ELITE SUPERVISOR",
@@ -339,7 +339,7 @@ const index = [
   {
     "badgeName": "Junior Chief Management",
     "badgeImage": "https://www.habbo.com/habbo-imaging/badge/b06134s02185s12177s44114s38174314c47f7a15f7d40f3c1dc2b469bf7a4.gif",
-    "duration": "48-72 hours",
+    "duration": "72 hours",
     "ranks": [
       "CHIEF DEBRIEFING OFFICER",
       "CHIEF LEGAL OFFICER",
@@ -404,7 +404,7 @@ const index = [
     ]
   },
   {
-    "badgeName": "",
+    "badgeName": "BOARD OF EXECUTIVES",
     "badgeImage": "",
     "duration": "72 hours",
     "ranks": [
@@ -414,7 +414,7 @@ const index = [
     ]
   },
   {
-    "badgeName": "",
+    "badgeName": "OWNER RANKS",
     "badgeImage": "",
     "duration": "72 hours",
     "ranks": [
@@ -425,6 +425,18 @@ const index = [
       "Founder's Representative"
     ]
   },
+
+  {
+    "badgeName": "FOUNDER'S REP",
+    "badgeImage": "",
+    "duration": "72 hours",
+    "ranks": [
+      "Founder's Representative"
+    ]
+  },
+
+
+
   {
     "badgeName": "Founders Cabinet",
     "badgeImage": "https://www.habbo.com/habbo-imaging/badge/b09034s02115s12017s43014s380146139d6c1c9146fc3842c02f2e8fccdf5.gif",
@@ -442,7 +454,18 @@ const index = [
     ]
   },
   {
-    "badgeName": "",
+    "badgeName": "EXECUTIVE FOUNDER",
+    "badgeImage": "",
+    "duration": "72 hours",
+    "ranks": [
+      "EXECUTIVE FOUNDER ",
+      "CHIEF EXECUTIVE FOUNDER ",
+      "DEPT.EXEC.FOUNDER",
+      "ASST.EXECUTIVE FOUNDER"
+    ]
+  },
+  {
+    "badgeName": "CHIEF OF STAFF",
     "badgeImage": "",
     "duration": "72 hours",
     "ranks": [
@@ -452,7 +475,7 @@ const index = [
     ]
   },
   {
-    "badgeName": "",
+    "badgeName": "Founding Director",
     "badgeImage": "",
     "duration": "72 hours",
     "ranks": [
@@ -460,7 +483,7 @@ const index = [
     ]
   },
   {
-    "badgeName": "",
+    "badgeName": "Founding Fathers",
     "badgeImage": "",
     "duration": "72 hours",
     "ranks": [

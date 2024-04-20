@@ -6,6 +6,8 @@ import style from './style.module.css'
 // import components
 import Main from '@/components/common/Main'
 import Section from '@/components/common/Section'
+import Heading1 from '@/components/common/heading/Heading1'
+
 
 import RankCard from '@/components/app/ranks/RankCard'
 // import images
@@ -15,8 +17,12 @@ import Ranks from '@/data/app/ranks/Ranks'
 
 const page = () => {
   return (
-    <Main>
+    <Main className={style.rankMain}>
       <Section >
+        <Heading1>About NOPD</Heading1>
+      </Section>
+      <Section >
+
         <div className={style.rankCardContainer}>
           {Ranks.map((rank, index) => (
             <div key={index} >

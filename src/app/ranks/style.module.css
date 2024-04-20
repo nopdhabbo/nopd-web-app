@@ -1,3 +1,7 @@
+.rankMain section {
+  padding: 2rem !important;
+}
+
 .rankCardContainer {
   display: flex;
   flex-wrap: wrap;
