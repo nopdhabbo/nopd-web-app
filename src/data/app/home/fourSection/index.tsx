@@ -1,15 +1,15 @@
 const index = [
   {
-    habboUserName: 'jordeboi',
-    position: 'founder'
+    habboUserName: 'towerboy08',
+    position: 'Co-Founder'
   },
   {
     habboUserName: 'jordeboi',
-    position: 'founder'
+    position: 'Founder'
   },
   {
-    habboUserName: 'jordeboi',
-    position: 'founder'
+    habboUserName: 'ItsMe.Carlos',
+    position: 'Co-Founder'
   }
 ]
 
