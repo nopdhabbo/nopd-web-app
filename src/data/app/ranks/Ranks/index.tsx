@@ -405,7 +405,7 @@ const index = [
   },
   {
     "badgeName": "BOARD OF EXECUTIVES",
-    "badgeImage": "",
+    "badgeImage": "https://www.habbo.com/habbo-imaging/badge/b09014s02175s12117s43114s381146c1a4dd55da58592ab95b2aa344cc8ab.gif",
     "duration": "72 hours",
     "ranks": [
       "EXECUTIVE BOARD MEMBER",
@@ -415,7 +415,7 @@ const index = [
   },
   {
     "badgeName": "OWNER RANKS",
-    "badgeImage": "",
+    "badgeImage": "https://www.habbo.com/habbo-imaging/badge/b09114s02035s11037s44114s38114428ddae412ecc64c100d1edfc472e508.gif",
     "duration": "72 hours",
     "ranks": [
       "CO-OWNER",
@@ -428,7 +428,7 @@ const index = [
 
   {
     "badgeName": "FOUNDER'S REP",
-    "badgeImage": "",
+    "badgeImage": "https://www.habbo.com/habbo-imaging/badge/b09014s02165s11167s44114s3816452949617fec4f98878579a1df26f274b.gif",
     "duration": "72 hours",
     "ranks": [
       "Founder's Representative"
@@ -455,7 +455,7 @@ const index = [
   },
   {
     "badgeName": "EXECUTIVE FOUNDER",
-    "badgeImage": "",
+    "badgeImage": "https://www.habbo.com/habbo-imaging/badge/b09114s02055s11057s44114s38114cf23869d2f0e40ac8fe72ed3cdc4928d.gif",
     "duration": "72 hours",
     "ranks": [
       "EXECUTIVE FOUNDER ",
@@ -466,7 +466,7 @@ const index = [
   },
   {
     "badgeName": "CHIEF OF STAFF",
-    "badgeImage": "",
+    "badgeImage": "https://www.habbo.com/habbo-imaging/badge/b09234s02145s11227s44114s38114ceee03191dcfb7313598a3775672ec02.gif",
     "duration": "72 hours",
     "ranks": [
       "ASST. COS",
@@ -476,7 +476,7 @@ const index = [
   },
   {
     "badgeName": "Founding Director",
-    "badgeImage": "",
+    "badgeImage": "https://www.habbo.com/habbo-imaging/badge/b09014s02125s11127s44114s38114739cd066536d820eef1608ff5a3f4c44.gif",
     "duration": "72 hours",
     "ranks": [
       "Founding Director"
@@ -484,7 +484,7 @@ const index = [
   },
   {
     "badgeName": "Founding Fathers",
-    "badgeImage": "",
+    "badgeImage": "https://www.habbo.com/habbo-imaging/badge/b09154s02055s11117s44114s38114f2d444cbb303956efac8e2083a0d7146.gif",
     "duration": "72 hours",
     "ranks": [
       "Founding Fathers"
