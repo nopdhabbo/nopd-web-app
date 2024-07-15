@@ -1,0 +1,9 @@
+
+.heading{
+  color: var(--blue-900);
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 120%;
+  text-transform: capitalize;
+  padding: .5rem 0;
+}

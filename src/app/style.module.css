@@ -1,0 +1,392 @@
+/* Hero Section */
+
+/* Hero Section Left */
+.heroSectionLeft {
+  width: 40%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroSectionHeadingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.heroSectionHeadingContainer h1 {
+  color: var(--blue-800);
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 110%;
+  letter-spacing: 0.5px;
+}
+
+.heroSectionHeadingContainer p {
+  color: var(--blue-900);
+  font-family: "Poppins", sans-serif;
+  /* font-weight: 800; */
+  font-size: 1rem;
+  line-height: 110%;
+  letter-spacing: 0.3px;
+}
+
+.heroSectionHeadingContainer button {
+  background-color: var(--gray-100);
+  color: var(--blue-800);
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  padding: 0.6rem 2rem;
+  border-radius: 0.2rem;
+
+  transition: all ease-in-out 0.2s;
+}
+
+.heroSectionHeadingContainer button:hover {
+  background-color: var(--color-1);
+  color: var(--blue-800);
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  padding: 0.6rem 2rem;
+  border-radius: 0.2rem;
+  box-shadow: var(--box-shadow-1);
+}
+
+.heroSectionSocialMedia {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.heroSectionSocialMedia img {
+  transition: all ease-in-out 0.2s;
+  z-index: 2;
+}
+.heroSectionSocialMedia img:hover {
+  box-shadow: var(--box-shadow-3);
+}
+
+/* Hero Section Right */
+.heroSectionRight {
+  width: 60%;
+  height: 25rem;
+
+  background-image: url("../../public/assets/nopd/app/home/nopd.png");
+  /* background-size: 10rem; */
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+/* Second Section Cards */
+
+.cardContainer {
+  width: 22.6rem;
+  height: 21rem;
+  background-color: var(--gray-100);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  transition: all ease-in-out 0.2s;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cardContainer:hover {
+  cursor: pointer;
+  box-shadow: var(--box-shadow-3);
+}
+
+.cardContainer h2 {
+  color: var(--blue-800);
+  font-size: 1.125rem;
+  line-height: 130%;
+  font-weight: 700;
+}
+
+.cardContainer p {
+  color: var(--blue-900);
+  font-size: 0.875rem;
+  line-height: 140.2%;
+  text-align: justify;
+}
+
+/* Third Section */
+
+.thirdSection {
+  width: 100%;
+  background-color: var(--blue-700);
+}
+
+.thirdSectionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.thirdSectionRight h2 {
+  font-weight: bold;
+  line-height: 130%;
+  font-size: 2.25rem;
+  color: var(--gray-50);
+}
+
+.thirdSectionRight p {
+  line-height: 150.7%;
+  font-size: 1rem;
+  color: var(--gray-50);
+}
+
+/* Four Section */
+
+.fourSection {
+  width: 100%;
+
+  background-color: var(--blue-300);
+}
+
+.fourSection > div {
+  flex-direction: column;
+}
+
+.fourSection h1 {
+  color: var(--blue-800);
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: capitalize;
+  line-height: 130%;
+}
+
+.foundationTeam {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.foundationTeamContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Name */
+.foundationTeamContainer h1 {
+  color: var(--blue-900);
+  font-size: 1.2rem;
+  font-weight: 500;
+  /* line-height: 130%; */
+}
+
+/* Position  */
+.foundationTeamContainer h2 {
+  color: var(--blue-800);
+  font-size: 1.2rem;
+  font-weight: bold;
+  /* line-height: 130%; */
+  text-transform: capitalize;
+}
+
+/* Five Section  */
+.fiveSectionHeadingContainer {
+  width: 60%;
+}
+.fiveSectionHeadingContainer h1 {
+  color: var(--blue-900);
+  font-size: 2.25rem;
+  font-weight: bold;
+  line-height: 130%;
+}
+
+.fiveSectionHeadingContainer p {
+  font-size: 1.125rem;
+  line-height: 150%;
+  color: var(--blue-900);
+}
+
+/* Six Section */
+
+.sixSectionContainer {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7rem;
+}
+
+.sixSectionContainer h1 {
+  color: var(--blue-900);
+  font-size: 2.75rem;
+  font-weight: bold;
+  line-height: 130%;
+}
+
+.sixSectionCardsCoontainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Six Section Card */
+.sixSectionCardContainer {
+  width: 48%;
+  padding: 2rem;
+  background-color: var(--gray-100);
+  border-radius: 0.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 1.5rem;
+
+  transition: all ease-in-out 0.2s;
+}
+.sixSectionCardContainer:hover {
+  box-shadow: var(--box-shadow-4);
+}
+
+.sixSectionCollapseIcon {
+  padding-top: 0.5rem;
+}
+
+.sixSectionCardContainer h1 {
+  color: var(--gray-400);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.sixSectionCardContainer h1 {
+  color: var(--gray-900);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.sixSectionCardContent {
+  width: 85%;
+}
+/* Rectables */
+.backgroundRectangle {
+  width: 100%;
+  height: 100vh;
+
+  position: absolute;
+  z-index: -1;
+  /* background-color: red; */
+}
+
+/* Rectangles */
+.rectangleOne {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-image: url("../../public/assets/nopd/app/home/rectangle1.svg");
+  /* background-size: 10rem; */
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.rectangleTwo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -10rem;
+  right: -10rem;
+
+  background-image: url("../../public/assets/nopd/app/home/rectangle2.svg");
+  /* background-size: 75rem; */
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.rectangleThree {
+  width: 100%;
+  height: 130vh;
+  position: absolute;
+  top: 2rem;
+
+  background-image: url("../../public/assets/nopd/app/home/rectangle3.svg");
+  /* background-size: 35rem; */
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.rectangleFour {
+  width: 100%;
+  height: 130vh;
+  position: absolute;
+  top: 22rem;
+
+  background-image: url("../../public/assets/nopd/app/home/rectangle4.svg");
+  /* background-size: 35rem; */
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.rectangleFive {
+  width: 100%;
+  height: 130vh;
+  position: absolute;
+  top: 22rem;
+  right: 0;
+
+  background-image: url("../../public/assets/nopd/app/home/rectangle5.svg");
+  /* background-size: 35rem; */
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.rectangleSix {
+  width: 100%;
+  height: 130vh;
+  position: absolute;
+  top: 85rem;
+  left: 0;
+
+  background-image: url("../../public/assets/nopd/app/home/rectangle6.svg");
+  /* background-size: 35rem; */
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+/* Loading Page */
+
+.Loading {
+  width: 100%;
+  height: 100%;
+  background: var(--blue-300);
+  z-index: 200;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}

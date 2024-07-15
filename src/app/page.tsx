@@ -1,113 +1,181 @@
-import Image from "next/image";
+'use client'
+import React, { useState } from 'react';
+
+import style from './style.module.css';
+
+import Link from 'next/link';
+import Image from 'next/image';
+
+// import data
+import hereSectionData from '@/data/app/home/heroSection'
+import secondSectionData from '@/data/app/home/secondSection';
+import thirdSectionData from '@/data/app/home/thirdSection';
+import fourSectionData from '@/data/app/home/fourSection';
+import fiveSectionData from '@/data/app/home/fiveSection';
+import sixSectionData from '@/data/app/home/sixSection';
+
+// import image
+import fiveSectionImage from '@/../public/assets/nopd/app/home/art_friendstream1.png'
+import MinusIcon from '@/../public/assets/nopd/app/home/minusIcon.svg'
+import PlusIcon from '@/../public/assets/nopd/app/home/plusIcon.svg'
+
+// components
+import Main from '@/components/common/Main'
+import Section from '@/components/common/Section'
 
 export default function Home() {
+
+  const [hoveredImages, setHoveredImages] = useState(Array(10).fill(false)); // Assuming you have 10 images
+
+  const handleMouseEnter = (index: number) => {
+    const updatedHoveredImages = [...hoveredImages];
+    updatedHoveredImages[index] = true;
+    setHoveredImages(updatedHoveredImages);
+  };
+
+  const handleMouseLeave = (index: number) => {
+    const updatedHoveredImages = [...hoveredImages];
+    updatedHoveredImages[index] = false;
+    setHoveredImages(updatedHoveredImages);
+  };
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <>
+      <div className={style.backgroundRectangle}>
+        <div className={style.rectangleOne}></div>
+        <div className={style.rectangleTwo}></div>
+        <div className={style.rectangleThree}></div>
+        <div className={style.rectangleFive}></div>
+        <div className={style.rectangleFour}></div>
+        <div className={style.rectangleSix}></div>
+
       </div>
+      <Main >
+        <Section>
+          <div className={style.heroSectionLeft}>
+            {/* Hero Section Heading Container */}
+            <div className={style.heroSectionHeadingContainer}>
+              <h1>Welcome to New Orlean’s City Police Department. </h1>
+              <p>Experience nostalgia with NOPD - the top Police Roleplay game on Habbo since 2007. Dive into the action and relive the golden days!</p>
+              <button>
+                <span>
+                  join now
+                </span>
+              </button>
+              <div className={style.heroSectionSocialMedia}>
+                {/* Map over social media data and render each platform */}
+                {hereSectionData.socialMedia.map((item, index) => (
+                  <Link key={index} href={item.link} target="_blank" rel="noopener noreferrer">
+                    <Image src={item.imgSrc} alt={item.alt} width={40} height={40} />
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+          {/* Hero Section Right */}
+          <div className={style.heroSectionRight}></div>
+        </Section>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        {/* Second Section */}
+        <Section >
+          {Object.keys(secondSectionData).map((key) => (
+            <div className={style.cardContainer} key={key}>
+              <Image src={secondSectionData[key as keyof typeof secondSectionData].imgSrc} alt={secondSectionData[key as keyof typeof secondSectionData].title} width={160} height={160} />
+              <h2>{secondSectionData[key as keyof typeof secondSectionData].title}</h2>
+              <p>{secondSectionData[key as keyof typeof secondSectionData].description}</p>
+            </div>
+          ))}
+        </Section>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        {/* Third Section */}
+        <Section className={style.thirdSection}>
+          <div className={style.thirdSectionContainer}>
+            <div className={style.thirdSectionLeft}>
+              {/* <WorldClock /> */}
+            </div>
+            <div className={style.thirdSectionRight}>
+              <h2>{thirdSectionData.title}</h2>
+              <p>{thirdSectionData.description}</p>
+            </div>
+          </div>
+        </Section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        {/* Section Four */}
+        <Section className={style.fourSection} >
+          <div>
+            <h1>our foundation team</h1>
+          </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+          {/* four Section Data */}
+          <div className={style.foundationTeam}>
+            {fourSectionData.map((item, index) => (
+              <div
+                key={index}
+                className={style.foundationTeamContainer}
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={() => handleMouseLeave(index)}
+              >
+                <Image
+                  src={
+                    hoveredImages[index]
+                      ? `https://www.habbo.com/habbo-imaging/avatarimage?user=${item.habboUserName}&direction=3&head_direction=3&action=wav&gesture=nrm&size=m`
+                      : `https://www.habbo.com/habbo-imaging/avatarimage?user=${item.habboUserName}&direction=3&head_direction=3&action=&gesture=nrm&size=m`
+                  }
+                  alt="habbo avatar"
+                  width={130}
+                  height={280}
+                />
+                <div>
+                  <h1>{item.habboUserName}</h1>
+                  <h2>{item.position}</h2>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        {/* Section Five */}
+        <Section>
+          <div>
+            <Image src={fiveSectionImage} alt="art friendstream" width={300} height={200} />
+          </div>
+          <div className={style.fiveSectionHeadingContainer}>
+            <h1>{fiveSectionData.title}</h1>
+            <p>{fiveSectionData.description}</p>
+          </div>
+        </Section>
+
+        {/* Section Six */}
+        <Section>
+          <div className={style.sixSectionContainer}>
+            <div>
+              <h1>Frequently Ask Questions</h1>
+            </div>
+            <div className={style.sixSectionCardsCoontainer}>
+
+              {sixSectionData.faq.map((item, index) => (
+                <div key={index} className={style.sixSectionCardContainer}>
+                  <div className={style.sixSectionCollapseIcon}>
+                    <Image src={MinusIcon} alt="collapse" width={20} height={20} />
+                  </div>
+                  <div className={style.sixSectionCardContent}>
+                    <h1>{item.question}</h1>
+                    <p>{item.response}</p>
+                  </div>
+                </div>
+              ))}
+
+            </div>
+          </div>
+        </Section>
+
+        {/* Section Seven */}
+        <Section>
+          <div>
+            {/* sevenSection */}
+          </div>
+        </Section>
+      </Main>
+    </>
   );
 }

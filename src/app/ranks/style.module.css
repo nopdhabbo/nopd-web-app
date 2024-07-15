@@ -1,0 +1,10 @@
+.rankMain section {
+  padding: 2rem !important;
+}
+
+.rankCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 2rem;
+}

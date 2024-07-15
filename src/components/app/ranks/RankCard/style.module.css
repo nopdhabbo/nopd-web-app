@@ -1,0 +1,45 @@
+.card {
+  width: 16.438rem;
+  height: 100%;
+
+  padding: 0.75rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--gray-100);
+  border-radius: 0.5rem;
+
+  transition: all ease-in-out 0.2s;
+}
+
+.card:hover {
+  box-shadow: var(--box-shadow-3);
+}
+
+.cardHead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardHeading {
+  font-size: 1.125rem;
+  color: var(--gray-900);
+  font-weight: bold;
+}
+
+.cardHeading2 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-2);
+  text-align: center;
+}
+
+.cardBody {
+  text-align: center;
+  color: var(--gray-900);
+  font-size: 1rem;
+  font-weight: 500;
+}

@@ -1,0 +1,51 @@
+/* Abput US */
+
+/* Common */
+.firstSection,
+.secondSection {
+  width: 50%;
+}
+
+.firstSectionContent,
+.secondSectionContent,
+.thirdSectionContent {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  text-align: justify;
+}
+
+/* First Section */
+
+.firstSectionRight {
+  
+}
+
+/* Second Section */
+
+.secondSectionContainer {
+  background-color: var(--blue-300);
+}
+
+.secondSectionLeft {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Third Section */
+
+.thirdSectionContainer {
+  background: rgb(178, 224, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(178, 224, 255, 1) 10%,
+    rgba(0, 86, 176, 1) 100%
+  );
+}
+
+.firstSectionRight {
+}

@@ -1,0 +1,127 @@
+/* footer */
+.footer {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerContainer {
+  width: 100%;
+
+  padding: 5rem 0;
+
+  background: rgb(0, 36, 74);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 36, 74, 1) 16%,
+    rgba(0, 86, 176, 1) 100%
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.footerWrapper {
+  height: 100%;
+  width: 73.75rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Footer Left */
+.footerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* NOPD LOgo */
+.nopdLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+/* nopdLogo */
+.nopdLogo img {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+/* NavigationLogo */
+.nopdLogo h1 {
+  font-size: 2rem;
+  color: var(--color-1);
+  font-weight: 800;
+}
+
+/* Disclaimer */
+.disclaimer {
+  width: 25rem;
+  font-weight: 300;
+  color: var(--gray-100);
+  font-size: 0.8rem;
+  text-align: justify;
+}
+
+/* FooterRight */
+.footerRight {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 7rem;
+}
+
+.footerRight h1 {
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--gray-100);
+}
+
+.footerRight span {
+  text-transform: capitalize;
+  color: var(--blue-300);
+  font-size: small;
+}
+
+.footerRight span:hover {
+  text-transform: capitalize;
+  color: var(--blue-100);
+}
+
+.nopdDevelopers {
+  width: 100%;
+}
+.nopdDevelopersHeading {
+  width: 100%;
+
+  font-size: 1rem;
+  color: var(--gray-100);
+  font-weight: 700;
+  padding: 1rem 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: linear-gradient(
+    to right,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+}
+
+.nopdDevelopersHeading a {
+  padding: 0 0.3rem;
+  color: var(--color-1);
+}
