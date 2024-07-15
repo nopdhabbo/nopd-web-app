@@ -10,6 +10,10 @@ const index = [
   {
     habboUserName: 'ItsMe.Carlos',
     position: 'Co-Founder'
+  },
+  {
+    habboUserName: 'IceBear0',
+    position: 'Developer'
   }
 ]
 
