@@ -4,17 +4,13 @@ const index = [
     position: 'Co-Founder'
   },
   {
-    habboUserName: 'jordeboi',
+    habboUserName: 'IceBear0',
     position: 'Founder'
   },
   {
     habboUserName: 'ItsMe.Carlos',
     position: 'Co-Founder'
   },
-  {
-    habboUserName: 'IceBear0',
-    position: 'Developer'
-  }
 ]
 
 export default index;
